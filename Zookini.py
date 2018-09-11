@@ -4,10 +4,10 @@
 print("Hey , there lets's start with your name : ")
 name = input()
 print("Welcome to Zookini %s" % name)
-print('Zookini is a top end alphabet numbers puzzle, the only one in the world! \n So here"s your first question: ')
+print('Zookini is a top end alphabet numbers puzzle, the only one in the world!\nSo here"s your first question: ')
 
-print("""You can only use any letter once, what are the largest that you could write down in words?\nExample: NINETY
-\nBut NINETY as N is used twice""")
+print("""You can only use any letter once, What is the largest number that you could write down in words?\nExample: NINETY
+\nBut in NINETY N is used twice""")
 
 
 jawab = "five thousand"
@@ -25,8 +25,8 @@ class ScoreBoard:
                 print("Thanks for playing")
                 playing = False
             else:
-                print("""You can only use any letter once, what are the largest that you could write down in words?\nExample: NINETY
-                \nBut NINETY as N is used twice""")
+                print("""You can only use any letter once, what are the largest that you could write down in words?\nExample: Six Million
+                \nBut in Six Million as I & L is used thrice and twice""")
                 self.ANSWER = input()
                 if self.ANSWER == jawab:
                     self.score += 1
@@ -38,6 +38,9 @@ class ScoreBoard:
 
                 print("Your score is :")
                 print(self.score)
+                print("""HINT: As per standard numbering system you may go upto billion, trillion, quadrillion, 
+                      quintillion, sextillion, septillion, octillion, nonillion, and decillion.....
+                      ...""")
 
 
 
