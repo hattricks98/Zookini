@@ -1,4 +1,4 @@
-
+from fuzzywuzzy import fuzz
 
 
 print("Hey , there lets's start with your name : ")
@@ -15,6 +15,7 @@ jawab = "five thousand"
 
 class ScoreBoard:
     ANSWER = input()
+    Ratio = fuzz.ratio(jawab.lower(),ANSWER.lower())
 
 
     def playingf(self):
@@ -27,18 +28,22 @@ class ScoreBoard:
             else:
                 print("""You can only use any letter once, what are the largest that you could write down in words?\nExample: Six Million
                 \nBut in Six Million as I & L is used thrice and twice""")
-                self.ANSWER = input()
-                if self.ANSWER == jawab:
+                soch = input('Try Again: ')
+                
+                lev = fuzz.ratio(jawab.lower(),soch.lower())
+                # if self.ANSWER == jawab:
+                if lev > 95:
+                    print('Your Levenshtein score: ' + str(lev))
                     self.score += 1
                     print(self.score)
                     print("You won!")
                     exit()
                 else:
                     self.score -= 1
-
-                print("Your score is :")
-                print(self.score)
-                print("""HINT: As per standard numbering system you may go upto billion, trillion, quadrillion, 
+                    print('Your Levenshtein score: ' + str(lev))
+                    print("Your score is :")
+                    print(self.score)
+                    print("""HINT: As per standard numbering system you may go upto billion, trillion, quadrillion, 
                       quintillion, sextillion, septillion, octillion, nonillion, and decillion.....
                       ...""")
 
@@ -55,13 +60,16 @@ class ScoreBoard:
 
     def my_score(self):
 
-        if self.ANSWER == jawab:
+        if self.Ratio >95:
             self.score += 1
+            print('Your Levenshtein score: ' + str(self.Ratio))
+            
         else:
             self.score -= 1
 
         print("Your score is :")
         print(self.score)
+        print('Your Levenshtein score: ' + str(self.Ratio))
 
 
 
