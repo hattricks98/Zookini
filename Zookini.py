@@ -33,14 +33,14 @@ class ScoreBoard:
                 lev = fuzz.ratio(jawab.lower(),soch.lower())
                 # if self.ANSWER == jawab:
                 if lev > 95:
-                    print('Your Levenshtein score: ' + str(lev))
+                    print('Your Levenshtein Score: ' + str(lev))
                     self.score += 1
                     print(self.score)
                     print("You won!")
                     exit()
                 else:
                     self.score -= 1
-                    print('Your Levenshtein score: ' + str(lev))
+                    print('Your Levenshtein Score: ' + str(lev))
                     print("Your score is :")
                     print(self.score)
                     print("""HINT: As per standard numbering system you may go upto billion, trillion, quadrillion, 
@@ -62,14 +62,14 @@ class ScoreBoard:
 
         if self.Ratio >95:
             self.score += 1
-            print('Your Levenshtein score: ' + str(self.Ratio))
+            print('Your Levenshtein Score: ' + str(self.Ratio))
             
         else:
             self.score -= 1
 
         print("Your score is :")
         print(self.score)
-        print('Your Levenshtein score: ' + str(self.Ratio))
+        print('Your Levenshtein Score: ' + str(self.Ratio))
 
 
 
