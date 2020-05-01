@@ -7,7 +7,7 @@ This is a word puzzle game that  matches the phrase with the clue
 ```
 foo@bar:~$ source ./zook/bin/activate
 ```
-- run 
+- Run: 
 ```
 foo@bar:~$ python zookini.py
 ```
