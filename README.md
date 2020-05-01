@@ -9,5 +9,5 @@ foo@bar:~$ source ./zook/bin/activate
 ```
 - Run: 
 ```
-foo@bar:~$ python zookini.py
+foo@bar:~$ python Zookini.py
 ```
